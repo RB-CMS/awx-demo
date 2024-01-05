@@ -1,6 +1,7 @@
 ---
-- name: Testing of IIS service
+- name: Testing IIS service
   hosts: all
-  tasks: 
-   - name: windows command to start the IIS service 
-     ansible.windows.win_command:  iisreset /start
+  tasks:
+    - name: Windows command to start the IIS service
+      ansible.windows.win_command: 
+        cmd: "iisreset /start"
