@@ -1,5 +1,7 @@
 ---
-- name: Restart IIS
-  win_shell: |
-      iisreset /stop
-      iisreset /start
+- name: Restart IIS on localhost
+  hosts: all
+  tasks:
+    - name: Restart IIS
+      win_shell: |
+          iisreset /start
