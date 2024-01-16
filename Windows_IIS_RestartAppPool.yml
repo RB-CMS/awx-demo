@@ -1,0 +1,7 @@
+---
+- name: Restart AppPool on Target Server
+  hosts: all
+  tasks:
+    - name: Restart AppPool
+      win_shell: |
+          Restart-WebAppPool -Name "DefaultAppPool"
