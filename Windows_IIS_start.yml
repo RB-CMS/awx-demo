@@ -1,6 +1,6 @@
 ---
 - name: Restart IIS on localhost
-  hosts: all
+  hosts: "{{host_group}}"
   tasks:
     - name: Restart IIS
       win_shell: |
