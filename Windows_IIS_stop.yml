@@ -1,6 +1,6 @@
 ---
 - name: Stop IIS on Target Server
-  hosts: all
+  hosts: "{{host_group}}"
   tasks:
     - name: Stop IIS
       win_shell: |
