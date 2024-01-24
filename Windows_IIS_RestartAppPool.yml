@@ -1,6 +1,6 @@
 ---
 - name: Restart AppPool on Target Server
-  hosts: all
+  hosts: "{{host_group}}"
   tasks:
     - name: Restart AppPool
       win_shell: |
